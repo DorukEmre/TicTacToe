@@ -1,1 +1,1 @@
-# TicTacToe
+# TicTacToe for the Odin Project
