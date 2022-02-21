@@ -23,18 +23,34 @@ main {
     margin: 0 auto;
 }
 
-.reset, .ok, .playAgain {
+.reset, .restart, .ok, .playAgain {
     padding: 10px 20px;
     background: #515B64;
     color: rgb(215, 215, 215);
     font-size: 1.2rem;
     border: none;
 }
-.reset:active, .ok:active, .playAgain:active {
+.restart {
+    padding: 11.5px 10px;
+    display: flex;
+    align-items: center;
+}
+header > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+.reset:active, .restart:active, .ok:active, .playAgain:active {
     transform: translateY(3px);
 }
-.reset:hover, .ok:hover, .playAgain:hover {
+.reset:hover, .restart:hover, .ok:hover, .playAgain:hover {
     background: #6c7986;
+}
+.restart.popup:active, .restart.popup:hover {
+    transform: none;
+    background: #515B64;
 }
 
 .score {
@@ -52,7 +68,7 @@ main {
 
 }
 .computerSide span {
-    color: #94D28D;
+    color: #7DCAAD;
     font-weight: 700;
 }
 
@@ -83,7 +99,7 @@ section[class^="box"] {
 .nought {
     width: 50%;
     height: 50%;
-    border: 8px solid #94D28D;
+    border: 8px solid #7DCAAD;
     border-radius: 50%;
 }
 .cross {
@@ -114,7 +130,7 @@ section[class^="box"] {
 }
 .win {
     visibility: hidden;
-    background: #AA701C;
+    background: #DCC271;
     width: 350px;
     position: absolute;
     left: 30px;
@@ -146,9 +162,20 @@ section[class^="box"] {
         padding: 20px 0;
         width: 100vw;
     }
+    header {
+        padding: 0 10px;
+    }
     .win {
         width: 80vw;
         left: 10vw;    
     }
-    
+    .reset {
+        padding: 8px 10px;
+    }
+    .restart {
+        padding: 9.5px 10px;
+    }
+    header > section {
+        gap: 5px;
+    }    
 }
