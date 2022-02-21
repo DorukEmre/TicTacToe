@@ -1,0 +1,154 @@
+
+body {
+    background: #384048;
+    color: rgb(215, 215, 215);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    width: 100vw;
+}
+header {
+    height: 75px;
+    background: #141F2A;
+    color: rgb(215, 215, 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+main {
+    padding: 20px 40px;
+    width: 410px;
+    margin: 0 auto;
+}
+
+.reset, .ok, .playAgain {
+    padding: 10px 20px;
+    background: #515B64;
+    color: rgb(215, 215, 215);
+    font-size: 1.2rem;
+    border: none;
+}
+.reset:active, .ok:active, .playAgain:active {
+    transform: translateY(3px);
+}
+.reset:hover, .ok:hover, .playAgain:hover {
+    background: #6c7986;
+}
+
+.score {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+.playerSide span {
+    color: #B176AC;
+    font-weight: 700;
+
+}
+.computerSide span {
+    color: #94D28D;
+    font-weight: 700;
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: 100px 110px 100px;
+    grid-template-rows:  100px 110px 100px;
+    margin: 0 auto;
+    width: 310px;
+    height: 310px;
+}
+section[class^="box"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #384048;
+}
+.box4, .box5, .box6 {
+    border-top: 5px solid #141F2A;
+    border-bottom: 5px solid #141F2A;
+}
+.box2, .box5, .box8 {
+    border-left: 5px solid #141F2A;
+    border-right: 5px solid #141F2A;
+}
+
+.nought {
+    width: 50%;
+    height: 50%;
+    border: 8px solid #94D28D;
+    border-radius: 50%;
+}
+.cross {
+    width: 75%;
+    height: 75%;
+    position: relative;  
+}
+.cross::before, 
+.cross::after {
+    content: '';
+    width: 100%;
+    height: 0px;
+    border-bottom: 8px solid #B176AC;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 46%;
+    left: 0;    
+}
+.cross::before {
+    transform: rotate(45deg);
+}
+.cross::after {
+    transform: rotate(-45deg);
+}
+
+.top {
+    position: relative;
+}
+.win {
+    visibility: hidden;
+    background: #AA701C;
+    width: 350px;
+    position: absolute;
+    left: 30px;
+    text-align: center;
+    border: 3px solid;
+    padding-bottom: 20px;
+    z-index: 5;
+}
+.winMessage {
+    color: #141F2A;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+.popup {
+    visibility: visible;
+}
+.win > section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+
+@media screen and (max-width:415px) {
+    main {
+        padding: 20px 0;
+        width: 100vw;
+    }
+    .win {
+        width: 80vw;
+        left: 10vw;    
+    }
+    
+}
