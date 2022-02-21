@@ -35,6 +35,9 @@ main {
     display: flex;
     align-items: center;
 }
+.playAgain {
+    background: #5B5A9A;
+}
 header > section {
     display: flex;
     justify-content: space-between;
@@ -55,12 +58,12 @@ header > section {
 
 .score {
     display: flex;
-    width: 80%;
+    width: 75%;
     justify-content: space-between;
     text-align: center;
     margin: 0 auto;
-    padding-bottom: 20px;
-    font-size: 1.2rem;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
 }
 .playerSide span {
     color: #B176AC;
